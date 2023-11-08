@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene backround="color:#C04000">
+            <a-camera position="0 8 15"></a-camera>
+            <a-assets timeout="10000">
+                <img id="bg" src="./images/Evening view.jpg">
+
+                <a-asset-item id="Women" src="./models/Women.gltf"></a-asset-item>
+                <a-asset-item id="Cat" src="./models/Cat.gltf"></a-asset-item>
+
+            </a-assets>
+
+            <a-sky src="#bg"></a-sky>
+
+            <a-entity light="type:ambient; intensity:0.5;">
+            </a-entity>
+            
+            <a-entity light="type:point;castShadow=true;color:#e6ca14;intensity:2.35" position="-5 8 1"></a-entity>
+
+            <a-entity>
+            <a-entity scale="0.8 0.8 0.8" gltf-model="#Women" position="-2 0.4 3" shadow="cast:true"></a-entity>
+            </a-entity>
+
+            <a-entity>
+            <a-entity scale="1 1 1" gltf-model="#Cat" position="-3 0.4 3" shadow="cast:true"></a-entity>
+            </a-entity>
+
+           
+        </a-scene>
+    </body>
+</html>
